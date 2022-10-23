@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    'use strict';
+    let map = new Map([['tpm',11],['jack',44],['aiden',99],['aiden',99]]);
+    let name = map.get('aiden');
+    map.set('ad',100);
+    map.set('ad',99);
+    map.delete('ad');
+    console.log(map.has('aiden'));
+    for (let i of map ){
+      console.log(i);
+    }
+
+    let set = new Set([1,2,3,3,3,3,3,3]);
+    set.add(5);
+    set.delete(2);
+    set.has(3);
+    for (let i of set ){
+        console.log(i);
+    }
+    // set.forEach(function (value){
+    //   console.log(value);
+    // })
+  </script>
+</head>
+<body>
+
+</body>
+</html>

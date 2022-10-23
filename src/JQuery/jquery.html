@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  公式：$(selector).action()-->
+<!--  导入jquery-->
+  <script src="jquery-3.6.1.js"></script>
+    <style>
+        #divMove{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<a href="" id="jq">click</a>
+mouse: <span id="mouseMove"></span>
+<div id="divMove">
+    移动鼠标
+</div>
+<div>
+    <ul id="test">
+        <li class="j">java</li>
+        <li name="python">python</li>
+    </ul>
+
+</div>
+<script>
+  // 选择器就是css的选择器
+  $('#jq').click(function (){
+    alert('hello,jquery');
+  });
+
+  //事件
+  // 鼠标事件，键盘事件，其他事件
+
+  //当网页加载完毕之后响应事件
+  $(function (){
+      $('#divMove').mousemove(function (e){
+          $('#mouseMove').text('x: '+ e.pageX + 'y: '+ e.pageY);
+      });
+  });
+
+  //操作dom
+    $('#test li[name = python]').text();//获得值
+    $('#test li[name = python]').text('ad');//设置值
+
+  $('#test li[name = python]').html();//获得值
+  $('#test li[name = python]').html('<h1>adsh</h1>');//设置值
+
+  $('#test li[name = python]').show();
+  $('#test li[name = python]').hide();
+</script>
+</body>
+</html>

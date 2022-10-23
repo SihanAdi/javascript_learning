@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //方法就是放在对象内部,对象只有属性和方法
+    var ad = {
+      name : 'adsh',
+      birth : 1998,
+      age : function (){
+        var now = new Date().getFullYear();
+        return now - this.birth;
+      }
+    }
+    var adsh = {
+      name : 'adsh',
+      birth : 1998,
+      age : function (c){
+        var now = new Date().getFullYear();
+        return `${c}, ${now - this.birth}`;
+      }
+    }
+    var sh = {
+      name : 'adsh6',
+      birth : 1998,
+      age : getage
+    }
+    function getage(){
+      var now = new Date().getFullYear();
+      return now - this.birth;
+    }
+
+  //  js中可以使用apply指定this指向
+    getage.apply(sh,[]);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

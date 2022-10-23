@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    MD5工具类-->
+    <script src="https://cdn.jsdelivr.net/npm/hash-wasm"></script>
+<!--    md5有问题-->
+</head>
+<body>
+<form action="#" method="post">
+  <p><span>用户名:</span> <input type="text" id="user" name="user"></p>
+  <p>
+    <span>密码:</span> <input type="password" id="password" name="psw"></p>
+  </p>
+<!--    绑定事件 onclick被点击-->
+  <button type="submit" onclick="aaa()" name="bt">提交</button>
+</form>
+
+<script>
+    function aaa(){
+        alert(1);
+        var user = document.getElementById('user');
+        var psw = document.getElementById('password');
+        console.log(user.value);
+        console.log(psw.value);
+        // psw.value = '123';
+        alert(2);
+        psw.value = md5(psw.value);
+        alert(psw.value);
+
+    }
+</script>
+</body>
+</html>

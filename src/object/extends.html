@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var sh = {
+            name : 'adsh6',
+            birth : 1998,
+            age : 24,
+            run : function (){
+                console.log(this.name + 'run')
+            }
+        }
+        var ad = {
+            name: 'ad'
+        }
+    //    老方法:原型对象
+        ad.__proto__ = sh;
+
+        //class
+        //老方法
+        function student(name){
+            this.name = name;
+        }
+        student.prototype.hello = function (){
+            alert('hello');
+        }
+        var s = new student('adsh');
+        s.hello();
+        //新方法
+        class teacher{
+            constructor(name) {
+                this.name = name;
+            }
+            hello(){
+                alert('hello');
+            }
+        }
+        var t = new teacher('ad');
+        t.hello();
+        //class继承
+        class math_teacher extends teacher{
+            constructor(name, grade) {
+                super(name);
+                this.grade = grade;
+            }
+            Grade(){
+                alert('math_teacher');
+            }
+        }
+        var m = new math_teacher('adsh', 100);
+        m.Grade();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

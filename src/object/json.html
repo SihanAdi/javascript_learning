@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  json表示(json是一个字符串）
+对象:{}
+数组：[]
+键值对：key:value
+-->
+  <script>
+    var sh = {
+      name : 'adsh6',
+      birth : 1998,
+      age : 24
+    }
+    //对象转json
+    var j = JSON.stringify(sh);
+  //  json字符串转为对象
+
+    var obj = JSON.parse(j);//   {"name":"adsh6","birth":1998,"age":24}
+    var obj2 = JSON.parse('{"name":"adsh6","birth":1998,"age":24}');
+  </script>
+</head>
+<body>
+
+</body>
+</html>

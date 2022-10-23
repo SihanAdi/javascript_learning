@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    let a = [1,2,3,4,5,'1'];
+    a.forEach(function (value) {
+      console.log(value);
+    })
+    for (let x in a){//x是索引
+      if (a.hasOwnProperty(x)){
+        console.log('chunzai');
+        console.log(a[x]);
+      }
+    }
+    for (let x of a){
+
+        console.log(a[x]);
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

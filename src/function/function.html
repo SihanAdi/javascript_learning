@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    'use strict'
+    function abs(x){
+      if (x >= 0){
+        return x;
+      }else{
+        return -x;
+      }
+    }
+    function abs1(x){
+      if (typeof x !== 'number'){//避免不存在参数
+        throw 'not a num';
+      }
+      if (x >= 0){
+        return x;
+      }else{
+        return -x;
+      }
+    }
+    var abs2 = function (x){
+      if (x >= 0){
+        return x;
+      }else{
+        return -x;
+      }
+    }
+    function abs3(x){
+      console.log('x->' + x);
+      for (let i of arguments){//所有传递进来的参数都是一个arguments数组
+        console.log(i);
+      }
+      if (x >= 0){
+        return x;
+      }else{
+        return -x;
+      }
+    }
+    abs2(10);
+    // 多个参数的问题，rest获取除了定义参数以外的参数
+    function a(x, y){//老方法
+      console.log('x->' + x);
+      console.log('y->' + y);
+      if (arguments.length>2){
+        for (let i = 2; i < arguments.length; i++){
+          console.log('args->' + arguments[i]);
+        }
+      }
+    }
+    function b(x,y,...rest){//rest只能写在最后面
+      console.log('x->' + x);
+      console.log('y->' + y);
+      console.log(rest)
+
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

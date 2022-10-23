@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  BOM浏览器对象模型-->
+<!--window：浏览器窗口-->
+  <script>
+  window.innerWidth;
+  window.innerHeight;
+  window.outerWidth;
+  window.outerHeight;
+
+  //Navigator:封装了浏览器信息,一般不用，因为可以被人修改
+  navigator.appName;
+  navigator.appVersion;
+  navigator.userAgent;
+  navigator.platform;
+
+  //screen:屏幕尺寸
+  screen.width;
+  screen.height;
+
+  //location：当前页面URL信息
+  //重新加载页面
+  // location.reload();
+  //设置新的地址
+  // location.assign('http://localhost:63342/javascript_learning/helloworld/HELLO.html?_ijt=l4tuctb1dps5ojm12b6jjjvn4d&_ij_reload=RELOAD_ON_SAVE');
+
+  //document:代表当前的页面
+  document.title;
+  document.title = 'adsh';
+  document.cookie;
+
+  //history:浏览器历史记录
+  history.back();//后退到上一个页面
+  history.forward();//前进到下一个页面
+  </script>
+</head>
+<body>
+<dl id="app">
+    <dt>Java</dt>
+    <dd>JavaSE</dd>
+    <dd>JavaEE</dd>
+</dl>
+<script>
+    var dl = document.getElementById('app');//获取具体的文档树节点，但是不可以在dl之前写
+</script>
+</body>
+</html>

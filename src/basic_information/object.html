@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //所有键都是字符串，值是任意类型
+    var person = {
+      name: 'ad',
+      age: 8,
+      sex: ['male', 'female','...']
+    }
+    person.age = 10;
+    console.log(person['age']);
+    console.log(person.jaja);//undefined
+    //可以动态删除添加
+    delete person.name;
+    person.jaja = 'jaja';
+    console.log('age' in person);
+    console.log(person.hasOwnProperty('age'));//判断一个属性是否是这个对象自身拥有的
+    console.log(person.hasOwnProperty('toString'));
+    console.log('toString' in person);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

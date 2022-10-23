@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //规范把变量都声明在开头
+    var c = 1;//全局变量
+    alert(c);
+    alert(window.c);//全局变量默认绑定window
+    window.alert(c);
+    var old_alert = window.alert;
+    old_alert(c);
+    window.alert = function (){
+
+    }
+    window.alert(123);
+    window.alert = old_alert(435);
+
+  //  如何减少全局变量冲突
+    var ad = {};//唯一全局变量
+    ad.name = 'adsh';//定义全局变量
+    ad.add = function (x,y){
+      return x+y;
+    }
+
+    function a (){
+      for (var i = 0; i < 100; i++) {
+        console.log(i);
+      }
+      console.log(i + 1);//出现问题打印出了101，局部作用域冲突，用let解决
+    }
+    function b (){
+      for (let i = 0; i < 100; i++) {
+        console.log(i);
+      }
+      console.log(i + 1);//出现问题打印出了101，局部作用域冲突，用let解决
+    }
+
+    const PI = 3.14;
+    // PI = 234;
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
