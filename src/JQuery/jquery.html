@@ -47,11 +47,16 @@ mouse: <span id="mouseMove"></span>
     $('#test li[name = python]').text();//获得值
     $('#test li[name = python]').text('ad');//设置值
 
+
   $('#test li[name = python]').html();//获得值
   $('#test li[name = python]').html('<h1>adsh</h1>');//设置值
 
   $('#test li[name = python]').show();
-  $('#test li[name = python]').hide();
+  $('#test li[name=python]').css({"color":"red"});
+  $('#test li[name=python]').toggle();
+
+
+  // $('#test li[name = python]').hide();
 </script>
 </body>
 </html>
